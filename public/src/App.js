@@ -4,6 +4,7 @@ import Register from './pages/Register';
 import Chat from './pages/Chat';
 import Login from './pages/Login';
 import SetAvatar from "./pages/SetAvatar";
+// import HomePage from "./pages/HomePage";
 export default function App() {
   return (
     <BrowserRouter>
@@ -12,6 +13,7 @@ export default function App() {
       <Route path="/login" element={<Login />} />
       <Route path="/setAvatar" element={<SetAvatar />} />
       <Route path="/" element={<Chat />} />
+      {/* <Route path="/" element={<HomePage />} /> */}
       
         
       </Routes>

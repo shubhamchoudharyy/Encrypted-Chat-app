@@ -15,6 +15,7 @@ const ChatInput = ({handleSendMsg}) => {
     let message=msg;
     message+=emoji.emoji;
     setMsg(message);
+    setShowEmojiPicker(false)
   }
   const sendChat=(event)=>{
     event.preventDefault();
@@ -30,7 +31,8 @@ const ChatInput = ({handleSendMsg}) => {
         <div className="button-container">
           <div className="emoji">
             <BsEmojiSmileFill onClick={handleEmojiPickerHideShow}/>
-            {showEmojiPicker && <Picker onEmojiClick={handleEmojiClick}/>}
+            {showEmojiPicker &&
+             ( <Picker onEmojiClick={handleEmojiClick} pickerStyle={{ width: 'auto', height: 'auto' }} className='emoji-picker'/> )}
           </div>
           
         </div>
@@ -94,6 +96,7 @@ const Container = styled.div`
       }
     }
   }
+  
   .input-container {
     width: 100%;
     border-radius: 2rem;
